@@ -1,27 +1,9 @@
 "use client"
 
 import Image from 'next/image';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const HeroSection: React.FC = () => {
-  useEffect(() => {
-    const handleAnimation = (element: HTMLElement, animation: string) => {
-      element.style.opacity = '0';
-      element.style.transform = animation.includes('Left') ? 'translateX(-100%)' : 'translateX(100%)';
-      element.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-      requestAnimationFrame(() => {
-        element.style.opacity = '1';
-        element.style.transform = 'translateX(0)';
-      });
-    };
-
-    const logo = document.querySelector('.animate-slideInRight') as HTMLElement;
-    const text = document.querySelector('.animate-slideInLeft') as HTMLElement;
-
-    if (logo) handleAnimation(logo, 'slideInRight');
-    if (text) handleAnimation(text, 'slideInLeft');
-  }, []);
-
   return (
     <section className="flex items-center justify-center bg-gray-100 p-8">
       <div className="flex flex-col md:flex-row items-center">
