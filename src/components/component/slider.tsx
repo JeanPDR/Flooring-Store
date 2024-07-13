@@ -31,7 +31,13 @@ export function Slider() {
           <CarouselItem>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tight">
+                <h2
+                  className="text-3xl font-bold tracking-tight"
+                  style={{
+                    fontFamily: "'Corben', sans-serif",
+                    fontWeight: "400",
+                  }}
+                >
                   Elevate Your Outdoor Adventures
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
@@ -60,7 +66,13 @@ export function Slider() {
                 className="rounded-lg object-cover aspect-video"
               />
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tight">
+                <h2
+                  className="text-3xl font-bold tracking-tight"
+                  style={{
+                    fontFamily: "'Corben', sans-serif",
+                    fontWeight: "400",
+                  }}
+                >
                   Sustainable Fashion for a Better Future
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
@@ -75,7 +87,13 @@ export function Slider() {
           <CarouselItem>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tight">
+                <h2
+                  className="text-3xl font-bold tracking-tight"
+                  style={{
+                    fontFamily: "'Corben', sans-serif",
+                    fontWeight: "400",
+                  }}
+                >
                   Unleash Your Culinary Creativity
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">

@@ -2,6 +2,8 @@ import FlooringActions from "@/components/FlooringActions";
 import Header from "@/components/Header";
 import SpecsSection from "@/components/SpecSection";
 import { Slider } from "@/components/component/slider";
+import HardwoodFlooring from "@/components/HardwoodFlooring";
+import FeaturesSection from "@/components/FeaturesSection";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Slider />
       <FlooringActions />
       <SpecsSection />
+      <HardwoodFlooring />
+      <FeaturesSection />
     </main>
   );
 }

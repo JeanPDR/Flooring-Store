@@ -65,14 +65,14 @@ const FlooringActions: React.FC = () => {
     <section className="relative bg-gray-100 p-8 h-96 flex items-center justify-center">
       <div className="absolute inset-0">
         <img
-          src="/images/background.jpg" // Substitua pelo caminho correto para sua imagem de fundo
+          src="/images/rooms/roomPorcini.jpg" // Substitua pelo caminho correto para sua imagem de fundo
           alt="Background"
           className="w-full h-full object-cover opacity-80"
         />
       </div>
       <div className="relative z-10 flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-4">
         <button
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 flex items-center"
+          className="bg-blue-500 text-white py-2 px-4 rounded  hover:bg-blue-600 flex items-center"
           onClick={() => setShopModalOpen(true)}
         >
           Shop Flooring
