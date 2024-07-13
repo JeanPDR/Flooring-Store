@@ -127,7 +127,7 @@ const Header = () => {
         <div className="fixed inset-0 bg-blue-700 text-white flex flex-col items-start p-8 z-40">
           <div className="flex w-full justify-between items-center animate-float">
             <Image
-              src="/images/Transparent-Logo.avif "
+              src="/images/Transparent-Logo.avif"
               alt="Logo"
               width={140}
               height={80}
