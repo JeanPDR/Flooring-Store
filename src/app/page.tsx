@@ -1,14 +1,13 @@
 import FlooringActions from "@/components/FlooringActions";
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-
+import { Slider } from "@/components/component/carousel";
 
 export default function Home() {
-  return (       
+  return (
     <main>
-      <Header/>
-      <HeroSection/>
-      <FlooringActions/>
+      <Header />
+      <Slider />
+      <FlooringActions />
     </main>
   );
 }
