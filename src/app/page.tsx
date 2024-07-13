@@ -4,6 +4,7 @@ import SpecsSection from "@/components/SpecSection";
 import { Slider } from "@/components/component/slider";
 import HardwoodFlooring from "@/components/HardwoodFlooring";
 import FeaturesSection from "@/components/FeaturesSection";
+import ContactUs from "@/components/contactUs";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SpecsSection />
       <HardwoodFlooring />
       <FeaturesSection />
+      <ContactUs />
     </main>
   );
 }

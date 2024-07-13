@@ -9,7 +9,7 @@ const FeaturesSection: React.FC = () => {
           alt="Large and Luxurious"
           className="w-[11%]"
         />
-        <h5 className="text-uppercase mt-4">Large and Luxurious</h5>
+        <h5 className="text-uppercase font-bold mt-4">Large and Luxurious</h5>
         <p>
           Ultra-long and extra-wide planks provide an upscale look, and are 89%
           larger than a standard 7”x48” plank.
@@ -21,7 +21,7 @@ const FeaturesSection: React.FC = () => {
           alt="AuthenTex™ Finish"
           className="w-[10%]"
         />
-        <h5 className="text-uppercase mt-4">AuthenTex™ Finish</h5>
+        <h5 className="text-uppercase font-bold mt-4">AuthenTex™ Finish</h5>
         <p>
           High definition imagery plus an Embossed In Register creates an
           authentic wood look and texture.
@@ -33,7 +33,7 @@ const FeaturesSection: React.FC = () => {
           alt="Quantum X™ Wear Layer"
           className="w-[30%]"
         />
-        <h5 className="text-uppercase mt-4">Quantum X™ Wear Layer</h5>
+        <h5 className="text-uppercase font-bold mt-4">Quantum X™ Wear Layer</h5>
         <p>
           Industry-leading protection against scratches, stains, and dents
           strengthened by real diamonds.
@@ -45,7 +45,9 @@ const FeaturesSection: React.FC = () => {
           alt="ClimateGuard™ Resistance"
           className="w-[16%]"
         />
-        <h5 className="text-uppercase mt-4">ClimateGuard™ Resistance</h5>
+        <h5 className="text-uppercase font-bold mt-4">
+          ClimateGuard™ Resistance
+        </h5>
         <p>
           Resists extreme temperature fluctuation, allowing product to be used
           in 3-season rooms.
@@ -57,7 +59,7 @@ const FeaturesSection: React.FC = () => {
           alt="Heavy Commercial Use"
           className="w-[16%]"
         />
-        <h5 className="text-uppercase mt-4">Heavy Commercial Use</h5>
+        <h5 className="text-uppercase font-bold mt-4">Heavy Commercial Use</h5>
         <p>Durable enough to withstand heavy everyday foot traffic.</p>
       </div>
     </div>
