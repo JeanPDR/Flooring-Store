@@ -87,8 +87,8 @@ const FlooringActions: React.FC = () => {
 
       {/* Shop Flooring Modal */}
       {isShopModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
-          <div className="bg-white p-8 rounded shadow-lg max-w-4xl w-full max-h-full overflow-auto">
+        <div className="fixed  inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
+          <div className="mt-[20%] bg-white p-8 rounded shadow-lg max-w-4xl w-full max-h-full overflow-auto">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl">Shop Flooring</h2>
               <button

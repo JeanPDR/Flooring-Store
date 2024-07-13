@@ -86,7 +86,7 @@ const Header = () => {
           <PhoneAndroidIcon className="text-blue-500 " />
           656-213-7247
         </a>
-        <button className="bg-blue-500 w-[180px] h-[40px] m-[5px] rounded-[5px] text-white tracking-wider hover:bg-blue-600 font-bold">
+        <button className="bg-blue-500 text-[15.5px] w-[180px] h-[40px] m-[5px] rounded-[5px] text-white tracking-wider hover:bg-blue-600 font-bold">
           SCHEDULE NOW
           <ArrowRightAltIcon />
         </button>
