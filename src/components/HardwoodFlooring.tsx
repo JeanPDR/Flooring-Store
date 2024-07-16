@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HardwoodFlooring: React.FC = () => {
   return (
-    <section className=" flex flex-col bg-gray-100  md:flex-row items-center p-8 pl-[10%] pr-[10%] mt-[1%] rounded">
+    <section className=" flex flex-col md:flex-row items-center p-8 pl-[10%] pr-[10%] rounded">
       <div className="md:w-1/2 md:pr-8">
         <h2
           className="text-4xl  mb-8"

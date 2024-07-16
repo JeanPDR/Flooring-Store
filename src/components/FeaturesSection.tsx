@@ -2,65 +2,72 @@ import React from "react";
 
 const FeaturesSection: React.FC = () => {
   return (
-    <div className="mt-[3%] mr-[10%] ml-[10%] flex flex-wrap justify-center items-center text-center px-1">
-      <div className="mt-[1.5%] bg-light w-full sm:w-1/2 p-4 flex flex-col items-center">
+    <div className="mt-[3%] flex flex-wrap justify-center items-center text-center px-1">
+      <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
         <img
-          src="/images/icons/iconXL.svg"
+          src="/images/icons/iconWaterproof.svg"
           alt="Large and Luxurious"
-          className="w-[11%]"
+          className="w-[16%]"
         />
-        <h5 className="text-uppercase font-bold mt-4">Large and Luxurious</h5>
+        <h5 className="text-uppercase font-bold mt-4">WATERPROOF</h5>
         <p>
-          Ultra-long and extra-wide planks provide an upscale look, and are 89%
-          larger than a standard 7”x48” plank.
+          Our floors are completely resistant to water and moisture, and won’t
+          swell, peel or buckle when exposed.
         </p>
       </div>
-      <div className="bg-light w-full sm:w-1/2 p-4 flex flex-col items-center">
+      <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
         <img
-          src="/images/icons/iconEIR.svg"
+          src="/images/icons/iconFireresistant.svg"
           alt="AuthenTex™ Finish"
-          className="w-[10%]"
+          className="w-[16%]"
         />
-        <h5 className="text-uppercase font-bold mt-4">AuthenTex™ Finish</h5>
-        <p>
-          High definition imagery plus an Embossed In Register creates an
-          authentic wood look and texture.
-        </p>
+        <h5 className="text-uppercase font-bold mt-4">FIRE RESISTANT</h5>
+        <p>Resistant to fire damage and won't assist the spread of fires.</p>
       </div>
-      <div className="bg-light w-full sm:w-1/2 md:w-1/3 p-4 flex flex-col items-center">
+      <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
         <img
-          src="/images/icons/iconProtectedby.svg"
+          src="/images/icons/iconPetfriendly.svg"
           alt="Quantum X™ Wear Layer"
-          className="w-[30%]"
+          className="w-[16%]"
         />
-        <h5 className="text-uppercase font-bold mt-4">Quantum X™ Wear Layer</h5>
+        <h5 className="text-uppercase font-bold mt-4">PET FRIENDLY</h5>
         <p>
-          Industry-leading protection against scratches, stains, and dents
-          strengthened by real diamonds.
+          With protection aginst accidents, stains, and scratches, no
+          four-legged friend will end up "in the doghouse".
         </p>
       </div>
-      <div className="bg-light w-full sm:w-1/2 md:w-1/3 p-4 flex flex-col items-center">
+      <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
         <img
-          src="/images/icons/iconTemperature.svg"
+          src="/images/icons/iconAntimicrobial.svg"
           alt="ClimateGuard™ Resistance"
           className="w-[16%]"
         />
-        <h5 className="text-uppercase font-bold mt-4">
-          ClimateGuard™ Resistance
-        </h5>
+        <h5 className="text-uppercase font-bold mt-4">ANTI-MICROBIAL</h5>
         <p>
-          Resists extreme temperature fluctuation, allowing product to be used
-          in 3-season rooms.
+          Our floors impede the growth of microorganisms, providing long term
+          protection against bacteria, fungi, and molds.
         </p>
       </div>
-      <div className="border-gray-500 bg-light w-full sm:w-1/2 md:w-1/3 p-4 flex flex-col items-center">
+      <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
         <img
-          src="/images/icons/iconElephant.svg"
+          src="/images/icons/iconIndentresistant.svg"
           alt="Heavy Commercial Use"
           className="w-[16%]"
         />
-        <h5 className="text-uppercase font-bold mt-4">Heavy Commercial Use</h5>
-        <p>Durable enough to withstand heavy everyday foot traffic.</p>
+        <h5 className="text-uppercase font-bold mt-4">INDENT RESISTANT</h5>
+        <p>
+          The durable wear layer on our floors protects against indentations,
+          and scratches, as well as stains, and discoloration.
+        </p>
+      </div>
+      <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
+        <img
+          src="/images/icons/iconInstall.svg"
+          alt="Heavy Commercial Use"
+          className="w-[22%]"
+        />
+        <h5 className="text-uppercase font-bold mt-4">EASY INSTALLATION</h5>
+        <p>Our simple click locking system makes installation a breeze.</p>
       </div>
     </div>
   );
