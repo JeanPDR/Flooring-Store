@@ -11,8 +11,8 @@ const FeaturesSection: React.FC = () => {
         />
         <h5 className="text-uppercase font-bold mt-4">WATERPROOF</h5>
         <p>
-          Our floors are completely resistant to water and moisture, and won’t
-          swell, peel or buckle when exposed.
+          Our floors are completely resistant to water and moisture, and
+          won&rsquo;t swell, peel or buckle when exposed.
         </p>
       </div>
       <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
@@ -22,24 +22,27 @@ const FeaturesSection: React.FC = () => {
           className="w-[16%]"
         />
         <h5 className="text-uppercase font-bold mt-4">FIRE RESISTANT</h5>
-        <p>Resistant to fire damage and won't assist the spread of fires.</p>
+
+        <p>
+          Resistant to fire damage and won&rsquo;t assist the spread of fires.
+        </p>
       </div>
       <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
         <img
           src="/images/icons/iconPetfriendly.svg"
-          alt="Quantum X™ Wear Layer"
+          alt="Quantum X&trade; Wear Layer"
           className="w-[16%]"
         />
         <h5 className="text-uppercase font-bold mt-4">PET FRIENDLY</h5>
         <p>
-          With protection aginst accidents, stains, and scratches, no
-          four-legged friend will end up "in the doghouse".
+          With protection against accidents, stains, and scratches, no
+          four-legged friend will end up &quot;in the doghouse&quot;.
         </p>
       </div>
       <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex flex-col items-center">
         <img
           src="/images/icons/iconAntimicrobial.svg"
-          alt="ClimateGuard™ Resistance"
+          alt="ClimateGuard&trade; Resistance"
           className="w-[16%]"
         />
         <h5 className="text-uppercase font-bold mt-4">ANTI-MICROBIAL</h5>
