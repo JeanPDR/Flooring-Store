@@ -7,7 +7,7 @@ import ContactUs from "@/components/contactUs";
 import LVPFlooring from "@/components/LVPFlooring";
 import LaminateFlooring from "@/components/LaminateFlooring";
 import TopRowWrapper from "@/components/TopRowWrapper";
-import { Slider } from "@/components/component/Slider";
+import { Slider } from "@/components/component/slider";
 
 export default function Home() {
   return (
