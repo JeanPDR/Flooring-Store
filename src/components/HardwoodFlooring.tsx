@@ -13,21 +13,21 @@ const HardwoodFlooring: React.FC = () => {
         </h2>
         <div className="space-y-4">
           <div className="bg-blue-100 p-4 rounded-lg">
-            <h3 className="text-2xl font-light mb-2">Natural Beauty</h3>
+            <h3 className="text-xl font-light mb-2">Natural Beauty</h3>
             <p>
               Hardwood floors add timeless elegance and warmth to any space.
             </p>
           </div>
           <div className="bg-blue-100 p-4 rounded-lg">
-            <h3 className="text-2xl font-light mb-2">Durability</h3>
+            <h3 className="text-xl font-light mb-2">Durability</h3>
             <p>Properly cared for, hardwood floors can last for decades.</p>
           </div>
           <div className="bg-blue-100 p-4 rounded-lg">
-            <h3 className="text-2xl font-light mb-2">Customization</h3>
+            <h3 className="text-xl font-light mb-2">Customization</h3>
             <p>Choose from a variety of wood species, stains, and finishes.</p>
           </div>
           <div className="bg-blue-100 p-4 rounded-lg">
-            <h3 className="text-2xl font-light mb-2">Increased Home Value</h3>
+            <h3 className="text-xl font-light mb-2">Increased Home Value</h3>
             <p>
               Hardwood floors are a valuable investment that can boost resale
               value.
