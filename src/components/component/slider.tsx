@@ -19,9 +19,12 @@ export function Slider() {
         <Carousel className="rounded-lg overflow-hidden">
           <CarouselContent>
             <CarouselItem>
-              <div className="bg-[#24A1AE] text-white text-center mr-1 ml-2 grid md:grid-cols-2 gap-8 items-center ">
+              <div className="bg-[#24A1AE] text-white text-center grid md:grid-cols-2 gap-8 items-center ">
                 <div className="space-y-4">
-                  <p className=" text-muted-foreground text-xl leading-relaxed">
+                  <p
+                    className="text-uppercase font-bold mt-4 text-[18px] sm:mr-[2%] ml-[2%] lg:text-[32px]"
+                    style={{ fontFamily: "Poppins", fontWeight: "800" }}
+                  >
                     Explore our premium collection of floors that blend beauty,
                     durability, and functionality
                   </p>
@@ -45,7 +48,10 @@ export function Slider() {
                   className="rounded-lg object-cover aspect-video"
                 />
                 <div className="space-y-4 ">
-                  <p className="text-muted-foreground text-xl leading-relaxed">
+                  <p
+                    className="text-uppercase font-bold mt-4 text-[18px] lg:text-[32px]"
+                    style={{ fontFamily: "Poppins", fontWeight: "800" }}
+                  >
                     Transform your spaces with our floors that combine unmatched
                     elegance and resilience.
                   </p>
@@ -55,13 +61,16 @@ export function Slider() {
             <CarouselItem>
               <div className="bg-[#24A1AE] text-white text-center grid md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-4">
-                  <p className="text-muted-foreground text-xl leading-relaxed">
+                  <p
+                    className="text-uppercase font-bold mt-4 text-[18px] sm:mr-[2%] ml-[2%] lg:text-[32px]"
+                    style={{ fontFamily: "Poppins", fontWeight: "800" }}
+                  >
                     Discover a range of flooring options that elevate the style
                     and comfort of any space.
                   </p>
                 </div>
                 <img
-                  src="/images/carousel/slide1.png"
+                  src="/images/carousel/slider3.png"
                   width={950}
                   height={400}
                   alt="Kitchen Essentials"
