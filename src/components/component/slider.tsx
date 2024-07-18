@@ -19,15 +19,15 @@ export function Slider() {
   return (
     <div className="relative w-full flex justify-center my-10">
       <Carousel
-        className=" mt-[160px] w-[92%]"
+        className=" mt-[160px] w-full"
         key="1"
         plugins={[autoplay.current]}
       >
         <CarouselContent>
           <CarouselItem>
-            <div className="p-1">
+            <div>
               <Card>
-                <CardContent className="flex flex-col items-center justify-center p-6">
+                <CardContent className="flex flex-col items-center justify-center py-6">
                   <div className="bg-[#24A1AE] text-white text-center grid md:grid-cols-2 gap-8 items-center">
                     <div className="space-y-4">
                       <p
@@ -51,9 +51,9 @@ export function Slider() {
             </div>
           </CarouselItem>
           <CarouselItem>
-            <div className="p-1">
+            <div>
               <Card>
-                <CardContent className="flex flex-col items-center justify-center p-6">
+                <CardContent className="flex flex-col items-center justify-center py-6">
                   <div className="bg-[#24A1AE] text-white text-center grid md:grid-cols-2 gap-8 items-center">
                     <img
                       src="/images/carousel/slide2.png"
@@ -77,9 +77,9 @@ export function Slider() {
             </div>
           </CarouselItem>
           <CarouselItem>
-            <div className="p-1">
+            <div>
               <Card>
-                <CardContent className="flex flex-col items-center justify-center p-6">
+                <CardContent className="flex flex-col items-center justify-center py-6">
                   <div className="bg-[#24A1AE] text-white text-center grid md:grid-cols-2 gap-8 items-center">
                     <div className="space-y-4">
                       <p
