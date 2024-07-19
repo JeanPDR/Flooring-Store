@@ -7,7 +7,7 @@ import ContactUs from "@/components/contactUs";
 import LVPFlooring from "@/components/LVPFlooring";
 import LaminateFlooring from "@/components/LaminateFlooring";
 import { Slider } from "@/components/component/slider";
-
+import CollectionCard from "@/components/CollectionCard";
 export default function Home() {
   return (
     <main>
@@ -15,6 +15,7 @@ export default function Home() {
       <Slider />
       <FlooringActions />
       <FlooringCollections />
+      <CollectionCard />
       <LVPFlooring />
       <HardwoodFlooring />
       <LaminateFlooring />
