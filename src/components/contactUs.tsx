@@ -41,7 +41,7 @@ const ContactUs: React.FC = () => {
                 </div>
                 <div className="text-center flex flex-col items-center">
                   <LocalPhoneIcon />
-                  <p className="mt-2">267-343-3480</p>
+                  <a href="tel:+(635215885">863-521-5885</a>
                 </div>
               </div>
             </div>

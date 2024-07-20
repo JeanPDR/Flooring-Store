@@ -9,6 +9,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import StarIcon from "@mui/icons-material/Star";
+import Link from "next/link";
 
 // Componente para a tarja com as estrelas e o texto
 const TopBar: React.FC = () => {
@@ -26,7 +27,7 @@ const TopBar: React.FC = () => {
   );
 };
 
-const Header = () => {
+const Header: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -55,10 +56,18 @@ const Header = () => {
     };
   }, []);
 
+  const handleProductsClick = () => {
+    const section = document.querySelector("#product");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false); // Fechar o menu móvel
+  };
+
   return (
     <>
       <TopBar />
-      <header className="fixed top-[4%] left-0 right-0 flex justify-between items-center bg-white p-4 z-40 w-full ">
+      <header className="fixed top-[4%] left-0 right-0 flex justify-between items-center bg-white p-4 z-40 w-full">
         <div className="flex-1 flex justify-center animate-float">
           <Image
             src="/images/Transparent-Logo.avif"
@@ -69,37 +78,15 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex flex-1 justify-center items-center space-x-6">
-          <div className="relative" ref={dropdownRef}>
-            <button
-              className="tracking-wider cursor-pointer space-x-2 font-bold"
-              onClick={toggleDropdown}
-            >
-              PRODUCTS
-            </button>
-            {isDropdownOpen && (
-              <div className="absolute top-8 left-0 bg-white border rounded shadow-lg">
-                <ul>
-                  <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                    DURAWOOD
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                    V-EVO MAX
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                    V-EVO XL
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                    AZUL TORTUGA
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                    PANZU
-                  </li>
-                  <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                    NUWUD
-                  </li>
-                </ul>
-              </div>
-            )}
+          <div className="relative">
+            <Link href="#">
+              <span
+                className="text-black tracking-wider font-bold cursor-pointer"
+                onClick={handleProductsClick}
+              >
+                PRODUCTS
+              </span>
+            </Link>
           </div>
           <a
             href="/about"
@@ -108,16 +95,16 @@ const Header = () => {
             ABOUT
           </a>
           <a
-            href="tel:+6562137247"
+            href="tel:+(635215885"
             className="text-black tracking-wider font-bold"
           >
             <PhoneAndroidIcon className="text-blue-500 mt-[-2%]" />
-            656-213-7247
+            863-521-5885
           </a>
 
           <a
             href="https://www.facebook.com"
-            className="text-blue-700 hover:text-blue-800 "
+            className="text-blue-700 hover:text-blue-800"
           >
             <FacebookIcon />
           </a>
@@ -160,33 +147,14 @@ const Header = () => {
             </div>
             <div className="flex flex-col mt-8 space-y-4 w-full">
               <div className="relative w-full" ref={dropdownRef}>
-                <button
-                  className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left"
-                  onClick={toggleDropdown}
-                >
-                  PRODUCTS
-                </button>
-                {isDropdownOpen && (
-                  <div className="mt-2 bg-white text-black rounded shadow-lg w-full">
-                    <ul>
-                      <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                        DURAWOOD
-                      </li>
-                      <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                        V-EVO MAX
-                      </li>
-                      <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                        V-EVO XL
-                      </li>
-                      <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                        AZUL TORTUGA
-                      </li>
-                      <li className="px-4 py-4 hover:bg-gray-200 cursor-pointer">
-                        PANZU
-                      </li>
-                    </ul>
-                  </div>
-                )}
+                <Link href="#">
+                  <span
+                    className="text-white tracking-wider font-bold cursor-pointer"
+                    onClick={handleProductsClick}
+                  >
+                    PRODUCTS
+                  </span>
+                </Link>
               </div>
               <a
                 href="/about"
@@ -206,6 +174,7 @@ const Header = () => {
           </div>
         )}
       </header>
+      {/* Adicione o componente de destino com o ID correspondente */}
     </>
   );
 };

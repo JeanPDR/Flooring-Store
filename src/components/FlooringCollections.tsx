@@ -2,7 +2,7 @@ import React from "react";
 
 const FlooringCollections: React.FC = () => {
   return (
-    <section className="py-12 ml-[15%] mr-[15%]">
+    <section id="product" className="py-12 ml-[15%] mr-[15%]">
       <div className=" container mx-auto px-4">
         <h2
           className="text-center text-4xl font-bold mb-8"
