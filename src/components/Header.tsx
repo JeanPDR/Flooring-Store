@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -28,6 +29,7 @@ const TopBar: React.FC = () => {
 };
 
 const Header: React.FC = () => {
+  const [isClient, setIsClient] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -56,6 +58,10 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const handleProductsClick = () => {
     const section = document.querySelector("#product");
     if (section) {
@@ -64,36 +70,54 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(false); // Fechar o menu móvel
   };
 
+  const currentPath = isClient ? window.location.pathname : "";
+
   return (
     <>
       <TopBar />
       <header className="fixed top-[4%] left-0 right-0 flex justify-between items-center bg-white p-4 z-40 w-full">
         <div className="flex-1 flex justify-center animate-float">
-          <Image
-            src="/images/Transparent-Logo.avif"
-            alt="Logo"
-            width={140}
-            height={80}
-          />
+          <Link href="/" legacyBehavior>
+            <a>
+              <Image
+                src="/images/Transparent-Logo.avif"
+                alt="Logo"
+                width={140}
+                height={80}
+              />
+            </a>
+          </Link>
         </div>
 
         <div className="hidden md:flex flex-1 justify-center items-center space-x-6">
-          <div className="relative">
-            <Link href="#">
-              <span
-                className="text-black tracking-wider font-bold cursor-pointer"
-                onClick={handleProductsClick}
+          {currentPath !== "/about" && (
+            <>
+              <div className="relative">
+                <Link href="#">
+                  <span
+                    className="text-black tracking-wider font-bold cursor-pointer"
+                    onClick={handleProductsClick}
+                  >
+                    PRODUCTS
+                  </span>
+                </Link>
+              </div>
+              <a
+                href="/about"
+                className="tracking-wider cursor-pointer space-x-2 font-bold"
               >
-                PRODUCTS
-              </span>
-            </Link>
-          </div>
-          <a
-            href="/about"
-            className="tracking-wider cursor-pointer space-x-2 font-bold"
-          >
-            ABOUT
-          </a>
+                ABOUT
+              </a>
+            </>
+          )}
+          {currentPath === "/about" && (
+            <a
+              href="https://catalogo-flooring-store.vercel.app/"
+              className="tracking-wider cursor-pointer space-x-2 font-bold"
+            >
+              CATALOG
+            </a>
+          )}
           <a
             href="tel:+(635215885"
             className="text-black tracking-wider font-bold"
@@ -147,21 +171,33 @@ const Header: React.FC = () => {
             </div>
             <div className="flex flex-col mt-8 space-y-4 w-full">
               <div className="relative w-full" ref={dropdownRef}>
-                <Link href="#">
-                  <span
-                    className="text-white tracking-wider font-bold cursor-pointer"
-                    onClick={handleProductsClick}
+                {currentPath !== "/about" && (
+                  <>
+                    <Link href="#">
+                      <span
+                        className="text-white tracking-wider font-bold cursor-pointer"
+                        onClick={handleProductsClick}
+                      >
+                        PRODUCTS
+                      </span>
+                    </Link>
+                    <a
+                      href="/about"
+                      className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left"
+                    >
+                      ABOUT
+                    </a>
+                  </>
+                )}
+                {currentPath === "/about" && (
+                  <a
+                    href="https://catalogo-flooring-store.vercel.app/"
+                    className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left"
                   >
-                    PRODUCTS
-                  </span>
-                </Link>
+                    CATALOG
+                  </a>
+                )}
               </div>
-              <a
-                href="/about"
-                className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left"
-              >
-                ABOUT
-              </a>
               <div className="flex space-x-4 mt-4">
                 <a href="https://www.facebook.com" className="text-white">
                   <FacebookIcon />
@@ -174,7 +210,6 @@ const Header: React.FC = () => {
           </div>
         )}
       </header>
-      {/* Adicione o componente de destino com o ID correspondente */}
     </>
   );
 };

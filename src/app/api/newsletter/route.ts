@@ -44,8 +44,7 @@ export async function POST(request: NextRequest) {
   try {
     await sendMailPromise();
     return NextResponse.json({
-      message:
-        "Your message has been forwarded successfully, we will contact you soon. Thank you very much for choosing us.",
+      message: "Thank you very much for subscribing to our Newsletter",
     });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
