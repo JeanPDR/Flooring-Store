@@ -8,6 +8,7 @@ import LVPFlooring from "@/components/LVPFlooring";
 import LaminateFlooring from "@/components/LaminateFlooring";
 import { Slider } from "@/components/component/slider";
 import CollectionCard from "@/components/CollectionCard";
+import NewsletterSubscription from "@/components/NewsletterSubscription";
 export default function Home() {
   return (
     <main>
@@ -21,6 +22,7 @@ export default function Home() {
       <LaminateFlooring />
       <FeaturesSection />
       <ContactUs />
+      <NewsletterSubscription />
     </main>
   );
 }
