@@ -155,7 +155,7 @@ const Header: React.FC = () => {
 
         {isMobileMenuOpen && (
           <div className="fixed inset-0 bg-blue-700 text-white flex flex-col items-start p-8 z-40">
-            <div className="flex w-full justify-between items-center animate-float">
+            <div className="flex w-full justify-between items-center animate-float mt-[7%]">
               <Image
                 src="/images/Transparent-Logo.avif"
                 alt="Logo"
@@ -175,7 +175,7 @@ const Header: React.FC = () => {
                   <>
                     <Link href="#">
                       <span
-                        className="text-white tracking-wider font-bold cursor-pointer"
+                        className="text-white tracking-wider font-bold cursor-pointer block"
                         onClick={handleProductsClick}
                       >
                         PRODUCTS
@@ -183,7 +183,7 @@ const Header: React.FC = () => {
                     </Link>
                     <a
                       href="/about"
-                      className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left"
+                      className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left block"
                     >
                       ABOUT
                     </a>
@@ -192,7 +192,7 @@ const Header: React.FC = () => {
                 {currentPath === "/about" && (
                   <a
                     href="https://catalogo-flooring-store.vercel.app/"
-                    className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left"
+                    className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left block"
                   >
                     CATALOG
                   </a>
