@@ -76,13 +76,13 @@ const Header: React.FC = () => {
     <>
       <TopBar />
       <header className="fixed top-[4%] left-0 right-0 flex justify-between items-center bg-white p-4 z-40 w-full">
-        <div className="flex-1 flex justify-center animate-float">
+        <div className="flex-1 flex justify-center">
           <Link href="/" legacyBehavior>
             <a>
               <Image
                 src="/images/Transparent-Logo.avif"
                 alt="Logo"
-                width={140}
+                width={300}
                 height={80}
               />
             </a>
@@ -127,13 +127,13 @@ const Header: React.FC = () => {
           </a>
 
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/profile.php?id=61558388606455"
             className="text-blue-700 hover:text-blue-800"
           >
             <FacebookIcon />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/pnvflooring/"
             className="text-pink-500 hover:text-pink-600"
           >
             <InstagramIcon />
