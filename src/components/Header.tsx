@@ -74,7 +74,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <TopBar />
+      {/* <TopBar /> */}
       <header className="fixed top-[4%] left-0 right-0 flex justify-between items-center bg-white p-4 z-40 w-full">
         <div className="flex-1 flex justify-center">
           <Link href="/" legacyBehavior>
