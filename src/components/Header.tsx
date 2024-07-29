@@ -74,8 +74,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {/* <TopBar /> */}
-      <header className="fixed top-[4%] left-0 right-0 flex justify-between items-center bg-white p-4 z-40 w-full">
+      <header className="fixed top-0 left-0 right-0 flex justify-between items-center bg-white z-40 w-full">
         <div className="flex-1 flex justify-center">
           <Link href="/" legacyBehavior>
             <a>
@@ -155,7 +154,7 @@ const Header: React.FC = () => {
 
         {isMobileMenuOpen && (
           <div className="fixed inset-0 bg-blue-700 text-white flex flex-col items-start p-8 z-40">
-            <div className="flex w-full justify-between items-center animate-float mt-[7%]">
+            <div className="flex w-full justify-between items-center mt-4">
               <Image
                 src="/images/Transparent-Logo.avif"
                 alt="Logo"

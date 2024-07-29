@@ -9,6 +9,7 @@ import LaminateFlooring from "@/components/LaminateFlooring";
 import { Slider } from "@/components/component/slider";
 import CollectionCard from "@/components/CollectionCard";
 import NewsletterSubscription from "@/components/NewsletterSubscription";
+import CookieConsent from "@/components/CookieConsent";
 export default function Home() {
   return (
     <main>

@@ -5,27 +5,15 @@ const AboutSection = () => {
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">
-          The Durato Difference
+          The PNV Flooring Difference
         </h2>
-        <p className="text-lg mb-6 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-          odio. Praesent libero. Sed cursus ante dapibus diam.
-        </p>
-        <p className="text-lg mb-6 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
-          sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-        </p>
-        <p className="text-lg mb-6 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-          odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-        </p>
-        <p className="text-lg mb-6 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis
-          sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-        </p>
-        <p className="text-lg mb-6 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-          odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+        <p className="text-xl mb-6 text-center">
+          Our company has been in the market for 5 years, committed to providing
+          high-quality flooring and exceptional installation services. We use
+          premium materials and advanced techniques to ensure superior
+          durability and aesthetics. Our experienced team customizes each
+          installation to meet the unique needs of every client, transforming
+          visions into reality with excellence and dedication!
         </p>
       </div>
     </section>

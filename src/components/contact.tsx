@@ -8,12 +8,23 @@ export type FormData = {
   zipCode: number;
   email: string;
   propertyType: string;
+  privacyPolicy: boolean; // Novo campo para o checkbox
 };
 
 const Contact: FC = () => {
-  const { register, handleSubmit } = useForm<FormData>();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<FormData>();
+  const privacyPolicyAccepted = watch("privacyPolicy");
 
   function onSubmit(data: FormData) {
+    if (!privacyPolicyAccepted) {
+      alert("Você precisa concordar com a política de privacidade.");
+      return;
+    }
     sendEmail(data);
   }
 
@@ -26,6 +37,9 @@ const Contact: FC = () => {
           className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-[#24A1AE] focus:shadow-md"
           {...register("zipCode", { required: true })}
         />
+        {errors.zipCode && (
+          <span className="text-red-500">Zip code é obrigatório</span>
+        )}
       </div>
       <div className="mb-5">
         <input
@@ -34,6 +48,9 @@ const Contact: FC = () => {
           className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-[#24A1AE] focus:shadow-md"
           {...register("email", { required: true })}
         />
+        {errors.email && (
+          <span className="text-red-500">Email é obrigatório</span>
+        )}
       </div>
       <div className="mb-5">
         <select
@@ -44,23 +61,35 @@ const Contact: FC = () => {
           <option value="residential">Residential</option>
           <option value="commercial">Commercial</option>
         </select>
+        {errors.propertyType && (
+          <span className="text-red-500">Property type é obrigatório</span>
+        )}
       </div>
-      {/* <div className="mb-5">
-        <label
-          htmlFor="message"
-          className="mb-3 block text-base font-medium text-black"
-        >
-          Message
+      <div className="mb-5 flex items-center">
+        <input
+          type="checkbox"
+          className="mr-2"
+          {...register("privacyPolicy", { required: true })}
+        />
+        <label className="text-base font-medium text-gray-700">
+          I agree to the{" "}
+          <a href="/privacy-policy" className="text-blue-500 underline">
+            Privacy Policy
+          </a>
         </label>
-        <textarea
-          rows={4}
-          placeholder="Type your message"
-          className="w-full resize-none rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
-          {...register("message", { required: true })}
-        ></textarea>
-      </div> */}
+      </div>
+      {errors.privacyPolicy && (
+        <span className="text-red-500">You must accept the privacy policy</span>
+      )}
       <div>
-        <button className="hover:shadow-form rounded-md bg-[#E77420] py-3 px-8 text-base font-semibold text-white outline-none">
+        <button
+          className={`hover:shadow-form rounded-md py-3 px-8 text-base font-semibold text-white outline-none ${
+            privacyPolicyAccepted
+              ? "bg-[#E77420]"
+              : "bg-gray-500 cursor-not-allowed"
+          }`}
+          disabled={!privacyPolicyAccepted}
+        >
           Submit
         </button>
       </div>
