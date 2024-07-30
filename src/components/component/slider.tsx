@@ -19,7 +19,7 @@ export function Slider() {
   return (
     <div className="relative w-full flex justify-center my-10">
       <Carousel
-        className=" mt-[234px] w-full"
+        className=" mt-[270px] w-full"
         key="1"
         plugins={[autoplay.current]}
       >
