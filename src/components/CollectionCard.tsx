@@ -41,7 +41,7 @@ const Collections: React.FC = () => {
   ];
 
   return (
-    <div className="  container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 pt-[120px]">
       <div className="flex flex-wrap -mx-2">
         {collections.map((collection, index) => (
           <CollectionCard

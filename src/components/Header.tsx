@@ -12,7 +12,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import StarIcon from "@mui/icons-material/Star";
 import Link from "next/link";
 
-// Componente para a tarja com as estrelas e o texto
 const TopBar: React.FC = () => {
   return (
     <div className="fixed top-0 left-0 right-0 bg-[#24A1AE] text-white py-2 flex justify-center items-center z-50">
@@ -29,6 +28,7 @@ const TopBar: React.FC = () => {
 };
 
 const Header: React.FC = () => {
+  const router = useRouter();
   const [isClient, setIsClient] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -70,11 +70,22 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(false); // Fechar o menu móvel
   };
 
+  const handleScheduleClick = () => {
+    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+    const section = document.querySelector("#form");
+    if (section) {
+      const sectionTop =
+        section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({ top: sectionTop, behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false); // Fechar o menu móvel ao clicar em Schedule Now
+  };
+
   const currentPath = isClient ? window.location.pathname : "";
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 flex justify-between items-center bg-white z-40 w-full p-4">
+      <header className="fixed top-0 left-0 right-0 flex justify-between items-center bg-white z-40 w-full">
         <div className="flex-1 flex justify-center">
           <Link href="/" legacyBehavior>
             <a>
@@ -128,17 +139,24 @@ const Header: React.FC = () => {
           <a
             href="https://www.facebook.com/profile.php?id=61558388606455"
             className="text-blue-700 hover:text-blue-800"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FacebookIcon />
           </a>
           <a
             href="https://www.instagram.com/pnvflooring/"
             className="text-pink-500 hover:text-pink-600"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <InstagramIcon />
           </a>
           {currentPath !== "/about" && currentPath !== "/privacy-policy" && (
-            <button className="bg-[#E77420] text-[15.5px] w-[184px] h-[44px] rounded-[5px] text-white tracking-wider hover:bg-[#e77320e2] font-bold ml-4">
+            <button
+              onClick={handleScheduleClick}
+              className="bg-[#E77420] text-[15.5px] w-[184px] h-[44px] rounded-[5px] text-white tracking-wider hover:bg-[#e77320e2] font-bold ml-2"
+            >
               SCHEDULE NOW
               <ArrowRightAltIcon />
             </button>
@@ -202,13 +220,30 @@ const Header: React.FC = () => {
                 )}
               </div>
               <div className="flex space-x-4 mt-4">
-                <a href="https://www.facebook.com" className="text-white">
+                <a
+                  href="https://www.facebook.com"
+                  className="text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FacebookIcon />
                 </a>
-                <a href="https://www.instagram.com" className="text-white">
+                <a
+                  href="https://www.instagram.com"
+                  className="text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <InstagramIcon />
                 </a>
               </div>
+              <button
+                onClick={handleScheduleClick}
+                className="bg-[#E77420] text-[15.5px] w-[184px] h-[44px] rounded-[5px] text-white tracking-wider hover:bg-[#e77320e2] font-bold mt-4"
+              >
+                SCHEDULE NOW
+                <ArrowRightAltIcon />
+              </button>
             </div>
           </div>
         )}
