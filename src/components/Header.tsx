@@ -74,7 +74,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 flex justify-between items-center bg-white z-40 w-full">
+      <header className="fixed top-0 left-0 right-0 flex justify-between items-center bg-white z-40 w-full p-4">
         <div className="flex-1 flex justify-center">
           <Link href="/" legacyBehavior>
             <a>
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
         </div>
 
         <div className="hidden md:flex flex-1 justify-center items-center space-x-6">
-          {currentPath !== "/about" && (
+          {currentPath !== "/about" && currentPath !== "/privacy-policy" && (
             <>
               <div className="relative">
                 <Link href="#">
@@ -109,7 +109,7 @@ const Header: React.FC = () => {
               </a>
             </>
           )}
-          {currentPath === "/about" && (
+          {(currentPath === "/about" || currentPath === "/privacy-policy") && (
             <a
               href="https://catalogo-flooring-store.vercel.app/"
               className="tracking-wider cursor-pointer space-x-2 font-bold"
@@ -137,10 +137,12 @@ const Header: React.FC = () => {
           >
             <InstagramIcon />
           </a>
-          <button className="bg-[#E77420] text-[15.5px] w-[184px] h-[44px] m-[5px] rounded-[5px] text-white tracking-wider hover:bg-[#e77320e2] font-bold">
-            SCHEDULE NOW
-            <ArrowRightAltIcon />
-          </button>
+          {currentPath !== "/about" && currentPath !== "/privacy-policy" && (
+            <button className="bg-[#E77420] text-[15.5px] w-[184px] h-[44px] rounded-[5px] text-white tracking-wider hover:bg-[#e77320e2] font-bold ml-4">
+              SCHEDULE NOW
+              <ArrowRightAltIcon />
+            </button>
+          )}
         </div>
 
         <div className="md:hidden flex items-center">
@@ -170,25 +172,27 @@ const Header: React.FC = () => {
             </div>
             <div className="flex flex-col mt-8 space-y-4 w-full">
               <div className="relative w-full" ref={dropdownRef}>
-                {currentPath !== "/about" && (
-                  <>
-                    <Link href="#">
-                      <span
-                        className="text-white tracking-wider font-bold cursor-pointer block"
-                        onClick={handleProductsClick}
+                {currentPath !== "/about" &&
+                  currentPath !== "/privacy-policy" && (
+                    <>
+                      <Link href="#">
+                        <span
+                          className="text-white tracking-wider font-bold cursor-pointer block"
+                          onClick={handleProductsClick}
+                        >
+                          PRODUCTS
+                        </span>
+                      </Link>
+                      <a
+                        href="/about"
+                        className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left block"
                       >
-                        PRODUCTS
-                      </span>
-                    </Link>
-                    <a
-                      href="/about"
-                      className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left block"
-                    >
-                      ABOUT
-                    </a>
-                  </>
-                )}
-                {currentPath === "/about" && (
+                        ABOUT
+                      </a>
+                    </>
+                  )}
+                {(currentPath === "/about" ||
+                  currentPath === "/privacy-policy") && (
                   <a
                     href="https://catalogo-flooring-store.vercel.app/"
                     className="tracking-wider cursor-pointer space-x-2 font-bold w-full text-left block"
