@@ -10,6 +10,7 @@ import { Slider } from "@/components/component/slider";
 import CollectionCard from "@/components/CollectionCard";
 import NewsletterSubscription from "@/components/NewsletterSubscription";
 import CookieConsent from "@/components/CookieConsent";
+import Script from "next/script";
 export default function Home() {
   return (
     <main>
@@ -24,6 +25,11 @@ export default function Home() {
       <FeaturesSection />
       <ContactUs />
       <NewsletterSubscription />
+      <Script
+        defer
+        src="https://us.umami.is/script.js"
+        data-website-id="51faee81-7f59-4c3d-82d5-aa21c3473cc8"
+      />
     </main>
   );
 }
