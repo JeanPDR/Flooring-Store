@@ -6,26 +6,23 @@ export async function POST(request: NextRequest) {
   const { zipCode, email, propertyType } = await request.json();
 
   const transport = nodemailer.createTransport({
-    service: "gmail",
-    /* 
-      setting service as 'gmail' is same as providing these setings:
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true
-      If you want to use a different email provider other than gmail, you need to provide these manually.
-      Or you can go use these well known services and their settings at
-      https://github.com/nodemailer/nodemailer/blob/master/lib/well-known/services.json
-  */
+    name: "mail.pnvflooringstore.com",
+    host: "mail.pnvflooringstore.com", // Host específico do Bluehost
+    port: 465, // Porta segura
+    secure: true, // Conexão SSL/TLS
     auth: {
       user: process.env.MY_EMAIL,
       pass: process.env.MY_PASSWORD,
+    },
+    tls: {
+      rejectUnauthorized: false, // i need this for sending via Bluehost
     },
   });
 
   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
-    // cc: email, (uncomment this line if you want to send a copy to the sender)
+    // cc: email, (descomente esta linha se quiser enviar uma cópia para o remetente)
     subject: `Message from ${email} vindo do site PNV Flooring`,
     text: `Zip code do cliente é ${zipCode} e tipo de sua residência ${propertyType}`,
   };
@@ -48,6 +45,7 @@ export async function POST(request: NextRequest) {
         "Your message has been forwarded successfully, we will contact you soon. Thank you very much for choosing us.",
     });
   } catch (err) {
+    console.log(err);
     return NextResponse.json({ error: err }, { status: 500 });
   }
 }
