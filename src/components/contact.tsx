@@ -22,7 +22,7 @@ const Contact: FC = () => {
 
   function onSubmit(data: FormData) {
     if (!privacyPolicyAccepted) {
-      alert("Você precisa concordar com a política de privacidade.");
+      alert("You must agree to the privacy policy.");
       return;
     }
     sendEmail(data);
@@ -38,7 +38,7 @@ const Contact: FC = () => {
           {...register("zipCode", { required: true })}
         />
         {errors.zipCode && (
-          <span className="text-red-500">Zip code é obrigatório</span>
+          <span className="text-red-500">Enter your Zip Code please</span>
         )}
       </div>
       <div className="mb-5">
@@ -49,7 +49,7 @@ const Contact: FC = () => {
           {...register("email", { required: true })}
         />
         {errors.email && (
-          <span className="text-red-500">Email é obrigatório</span>
+          <span className="text-red-500">Enter your email please</span>
         )}
       </div>
       <div className="mb-5">
@@ -62,7 +62,7 @@ const Contact: FC = () => {
           <option value="commercial">Commercial</option>
         </select>
         {errors.propertyType && (
-          <span className="text-red-500">Property type é obrigatório</span>
+          <span className="text-red-500">Property type is mandatory</span>
         )}
       </div>
       <div className="mb-5 flex items-center">
