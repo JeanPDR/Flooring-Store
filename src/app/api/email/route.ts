@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
-  const { zipCode, email, propertyType } = await request.json();
+  const { zipCode, email, propertyType, phone, name } = await request.json();
 
   const transport = nodemailer.createTransport({
     name: "mail.pnvflooringstore.com",
@@ -23,8 +23,12 @@ export async function POST(request: NextRequest) {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
     // cc: email, (descomente esta linha se quiser enviar uma cópia para o remetente)
-    subject: `Message from ${email} vindo do site PNV Flooring`,
-    text: `Zip code do cliente é ${zipCode} e tipo de sua residência ${propertyType}`,
+    subject: `Mensagem de ${name} vindo do site PNV Flooring`,
+    text: `Você recebeu um novo contato vindo do Formulário, segue os dados do cliente
+    Email: ${email}
+    Telefone: ${phone}
+    ZipCode: ${zipCode}
+    Tipo de Residência: ${propertyType}`,
   };
 
   const sendMailPromise = () =>

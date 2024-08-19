@@ -9,6 +9,8 @@ export type FormData = {
   email: string;
   propertyType: string;
   privacyPolicy: boolean; // Novo campo para o checkbox
+  phone: number;
+  name: string;
 };
 
 const Contact: FC = () => {
@@ -30,6 +32,29 @@ const Contact: FC = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="mb-5">
+        <input
+          type="text"
+          placeholder="Name"
+          className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-[#24A1AE] focus:shadow-md"
+          {...register("name", { required: true })}
+        />
+        {errors.name && (
+          <span className="text-red-500">Enter your Name please</span>
+        )}
+      </div>
+      <div className="mb-5">
+        <input
+          type="number"
+          placeholder="Phone number"
+          className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-[#24A1AE] focus:shadow-md"
+          {...register("phone", { required: true })}
+        />
+        {errors.phone && (
+          <span className="text-red-500">Enter your number phone please</span>
+        )}
+      </div>
+
       <div className="mb-5">
         <input
           type="text"
