@@ -7,7 +7,10 @@ export type FormData = {
   zipCode: number;
   email: string;
   propertyType: string;
-  privacyPolicy: boolean; // Novo campo para o checkbox
+  privacyPolicy: boolean;
+  phone: number;
+  name: string;
+  // Novo campo para o checkbox
 };
 
 const NewsletterSubscription: React.FC = () => {

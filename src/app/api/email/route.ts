@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     Email: ${email}
     Telefone: ${phone}
     ZipCode: ${zipCode}
-    Tipo de Residência: ${propertyType}`,
+    Nome: ${name}`,
   };
 
   const sendMailPromise = () =>
